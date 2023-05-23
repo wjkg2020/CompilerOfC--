@@ -46,7 +46,7 @@ public:
 class CharNode: public ExpressionNode {
   public:
     string value;
-  
+
   public:
     CharNode(string value, int lineNo) : ExpressionNode(lineNo),value(value) {}
     llvm::Value *emitter(EmitContext &emitContext);
@@ -71,6 +71,7 @@ class BinaryOpNode: public ExpressionNode {
     llvm::Value *emitter(EmitContext &emitContext);
 };
 
+// indentifierNode "sdfsdf"
 class AssignmentNode: public ExpressionNode {
   public:
     int op;
